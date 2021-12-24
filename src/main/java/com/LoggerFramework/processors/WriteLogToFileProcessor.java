@@ -12,6 +12,7 @@ public class WriteLogToFileProcessor extends LogProcessor {
 
     private WriteLogToFileProcessor(){
         config = LoggerConfiguration.getInstance();
+        setNextProcessor(SendLogToELKProcessor.getProcessor());
     }
 
     private static class WriteLogToFileProcessorHelper{
@@ -37,7 +38,7 @@ public class WriteLogToFileProcessor extends LogProcessor {
 
     @Override
     protected void setNextProcessor(ILogProcessor logProcessor) {
-        this.logProcessor = SendLogToELKProcessor.getProcessor();
+        this.logProcessor = logProcessor;
     }
 
     @Override
