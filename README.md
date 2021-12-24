@@ -36,6 +36,7 @@ This project is created to implement a Logging Framework for any Java Applicatio
 #### UML Design
 
  ![alt text](https://github.com/rshubham/LoggerFramework/blob/master/UML_Design.jpeg)
+ 
 
 
 
