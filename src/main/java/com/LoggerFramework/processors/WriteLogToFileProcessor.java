@@ -28,12 +28,9 @@ public class WriteLogToFileProcessor extends LogProcessor {
     @Override
     public void process(LoggerEnum loggerEnum,String className,String text) {
         if(LoggerEnum.YES.name().equals(config.getConfig(LoggerEnum.ENABLE_WRITE_TO_FILE.name()))) {
-
             // do process
-
         }
         if(getNextProcessor() != null) getNextProcessor().process(loggerEnum,className,text);
-
     }
 
     @Override
